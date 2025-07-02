@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrumento de Diagnóstico de Saberes Previos</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for better readability and aesthetics */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+            color: #374151; /* Dark gray text */
+        }
+        .container {
+            max-width: 960px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #ffffff; /* White background for content */
+            border-radius: 0.75rem; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+        h1, h2, h3 {
+            color: #1f2937; /* Darker gray for headings */
+            font-weight: 700; /* Bold headings */
+            margin-bottom: 1rem;
+        }
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        .table-container {
+            overflow-x: auto; /* Allow horizontal scrolling for tables on small screens */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+        }
+        th, td {
+            border: 1px solid #e5e7eb; /* Light gray border for table cells */
+            padding: 0.75rem;
+            text-align: left;
+        }
+        th {
+            background-color: #f9fafb; /* Lighter background for table headers */
+            font-weight: 600;
+        }
+        .radio-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .radio-group input[type="radio"] {
+            margin-right: 0.5rem;
+        }
+        .code-block {
+            background-color: #e2e8f0; /* Light blue-gray for code blocks */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-family: 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
+            white-space: pre-wrap; /* Preserve whitespace and wrap text */
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        .section-separator {
+            border-top: 1px dashed #d1d5db; /* Dashed line for section separation */
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-3xl text-center mb-6">Instrumento de Diagnóstico de Saberes Previos</h1>
+
+        <p class="text-lg mb-4">
+            A continuación encontrarás un instrumento de diagnóstico de saberes previos orientado a estudiantes que van a cursar el espacio “Programación, Diseño y Desarrollo Web”. Está compuesto por tres secciones:
+        </p>
+        <ul class="list-disc list-inside mb-4">
+            <li>Autoevaluación de conceptos y herramientas (15 ítems, escala Likert 1–5)</li>
+            <li>Prueba de conocimientos específicos (10 preguntas objetivas tipo test)</li>
+            <li>Actividad práctica breve (un mini‐reto de codificación y diseño)</li>
+        </ul>
+
+        <h2 class="text-2xl mt-8 mb-4">Instrucciones generales</h2>
+        <ul class="list-disc list-inside mb-4">
+            <li><strong>Público:</strong> Estudiantes que ingresan al taller “Programación, Diseño y Desarrollo Web”.</li>
+            <li><strong>Duración total aproximada:</strong> 40 minutos.</li>
+            <li><strong>Material permitido:</strong> Lápiz, borrador, papel. No celulares ni internet.</li>
+            <li><strong>Objetivo:</strong> Detectar fortalezas y brechas en conceptos de programación, diseño web, estructuras de control, y uso de herramientas CMS/Frameworks.</li>
+        </ul>
+
+        <div class="section-separator"></div>
+
+        <h2 class="text-2xl mt-8 mb-4">1. Autoevaluación de conceptos y herramientas (15 ítems)</h2>
+        <p class="mb-4">
+            Para cada enunciado, marca con una X en la columna que mejor describa tu nivel de acuerdo o familiaridad:
+        </p>
+
+        <div class="table-container">
+            <table class="min-w-full">
+                <thead>
+                    <tr>
+                        <th class="py-3 px-4">Ítem</th>
+                        <th class="py-3 px-4">Enunciado</th>
+                        <th class="py-3 px-4">1 (Nada)</th>
+                        <th class="py-3 px-4">2 (Poco)</th>
+                        <th class="py-3 px-4">3 (Regular)</th>
+                        <th class="py-3 px-4">4 (Bien)</th>
+                        <th class="py-3 px-4">5 (Experto)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4">1</td>
+                        <td class="py-2 px-4">Conozco la diferencia entre variable constante y variable.</td>
+                        <td class="py-2 px-4"><input type="radio" name="item1"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item1"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item1"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item1"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item1"></td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4">2</td>
+                        <td class="py-2 px-4">Sé qué es un algoritmo y puedo describir sus pasos.</td>
+                        <td class="py-2 px-4"><input type="radio" name="item2"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item2"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item2"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item2"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item2"></td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4">3</td>
+                        <td class="py-2 px-4">Distinguir operadores matemáticos de relacionales.</td>
+                        <td class="py-2 px-4"><input type="radio" name="item3"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item3"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item3"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item3"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item3"></td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4">4</td>
+                        <td class="py-2 px-4">He escrito pseudocódigo o diagramas de flujo para resolver un problema.</td>
+                        <td class="py-2 px-4"><input type="radio" name="item4"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item4"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item4"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item4"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item4"></td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4">5</td>
+                        <td class="py-2 px-4">Entiendo el concepto de funciones (o subprogramas) y su uso.</td>
+                        <td class="py-2 px-4"><input type="radio" name="item5"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item5"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item5"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item5"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item5"></td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4">6</td>
+                        <td class="py-2 px-4">Puedo identificar estructuras de control: if, while, for.</td>
+                        <td class="py-2 px-4"><input type="radio" name="item6"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item6"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item6"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item6"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item6"></td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4">7</td>
+                        <td class="py-2 px-4">He programado alguna vez en C o Java (aunque sea código de ejemplo).</td>
+                        <td class="py-2 px-4"><input type="radio" name="item7"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item7"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item7"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item7"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item7"></td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4">8</td>
+                        <td class="py-2 px-4">Conozco al menos un CMS (WordPress, Joomla, Drupal) y sé instalarlo/configurarlo.</td>
+                        <td class="py-2 px-4"><input type="radio" name="item8"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item8"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item8"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item8"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item8"></td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4">9</td>
+                        <td class="py-2 px-4">He utilizado frameworks frontend (Bootstrap, Materialize, Tailwind…).</td>
+                        <td class="py-2 px-4"><input type="radio" name="item9"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item9"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item9"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item9"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item9"></td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4">10</td>
+                        <td class="py-2 px-4">Tengo nociones de HTML5, CSS3 y JavaScript.</td>
+                        <td class="py-2 px-4"><input type="radio" name="item10"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item10"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item10"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item10"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item10"></td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4">11</td>
+                        <td class="py-2 px-4">Sé qué es un diseño responsivo y cómo adaptar un layout a móviles.</td>
+                        <td class="py-2 px-4"><input type="radio" name="item11"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item11"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item11"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item11"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item11"></td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4">12</td>
+                        <td class="py-2 px-4">Sé qué es un repositorio Git y cómo clonar un proyecto.</td>
+                        <td class="py-2 px-4"><input type="radio" name="item12"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item12"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item12"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item12"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item12"></td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4">13</td>
+                        <td class="py-2 px-4">He trabajado con librerías o componentes de código abierto (npm, CDN).</td>
+                        <td class="py-2 px-4"><input type="radio" name="item13"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item13"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item13"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item13"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item13"></td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4">14</td>
+                        <td class="py-2 px-4">Entiendo la arquitectura cliente‑servidor y peticiones HTTP básicas (GET/POST).</td>
+                        <td class="py-2 px-4"><input type="radio" name="item14"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item14"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item14"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item14"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item14"></td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4">15</td>
+                        <td class="py-2 px-4">He creado al menos un pequeño sitio web real o prototipo funcional.</td>
+                        <td class="py-2 px-4"><input type="radio" name="item15"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item15"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item15"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item15"></td>
+                        <td class="py-2 px-4"><input type="radio" name="item15"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="text-xl mt-6 mb-2">Interpretación rápida:</h3>
+        <ul class="list-disc list-inside mb-4">
+            <li><strong>Puntuaciones 1–2:</strong> repaso teórico-guía inicial</li>
+            <li><strong>Puntuaciones 3:</strong> nivel compacto, requiere refuerzo puntual</li>
+            <li><strong>Puntuaciones 4–5:</strong> alta confianza; puede asumir rol de mentor entre pares</li>
+        </ul>
+
+        <div class="section-separator"></div>
+
+        <h2 class="text-2xl mt-8 mb-4">2. Prueba de conocimientos específicos (10 preguntas tipo test)</h2>
+        <p class="mb-4">Marca la alternativa correcta.</p>
+
+        <div class="space-y-6">
+            <div>
+                <p class="font-semibold mb-2">1. ¿Cuál es la salida en pantalla de este fragmento en C?</p>
+                <div class="code-block">
+                    int x = 5;<br>
+                    if (x > 3) printf("%d", x);<br>
+                    else printf("0");
+                </div>
+                <div class="radio-group">
+                    <label><input type="radio" name="q1" value="a"> a) 0</label>
+                    <label><input type="radio" name="q1" value="b"> b) 5</label>
+                    <label><input type="radio" name="q1" value="c"> c) Error de compilación</label>
+                </div>
+            </div>
+
+            <div>
+                <p class="font-semibold mb-2">2. En pseudocódigo, ¿qué instrucción representa mejor un bucle “hasta que”?</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="q2" value="a"> a) while (condición) …</label>
+                    <label><input type="radio" name="q2" value="b"> b) repeat … until (condición)</label>
+                    <label><input type="radio" name="q2" value="c"> c) for (i=0; i&lt;n; i++) …</label>
+                </div>
+            </div>
+
+            <div>
+                <p class="font-semibold mb-2">3. En HTML5, la etiqueta &lt;section&gt; se usa para:</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="q3" value="a"> a) Insertar un bloque de formulario</label>
+                    <label><input type="radio" name="q3" value="b"> b) Definir una sección genérica de contenido</label>
+                    <label><input type="radio" name="q3" value="c"> c) Mostrar texto en negrita</label>
+                </div>
+            </div>
+
+            <div>
+                <p class="font-semibold mb-2">4. ¿Qué significa que un sitio sea “responsive”?</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="q4" value="a"> a) Que responde al servidor rápido</label>
+                    <label><input type="radio" name="q4" value="b"> b) Que se adapta a distintos tamaños de pantalla</label>
+                    <label><input type="radio" name="q4" value="c"> c) Que utiliza JavaScript intensivo</label>
+                </div>
+            </div>
+
+            <div>
+                <p class="font-semibold mb-2">5. En CSS, para centrar horizontalmente un bloque con display: block;, usamos:</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="q5" value="a"> a) margin: auto;</label>
+                    <label><input type="radio" name="q5" value="b"> b) text-align: center;</label>
+                    <label><input type="radio" name="q5" value="c"> c) float: center;</label>
+                </div>
+            </div>
+
+            <div>
+                <p class="font-semibold mb-2">6. ¿Cuál comando de Git recupera cambios del servidor remoto sin fusionarlos?</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="q6" value="a"> a) git pull</label>
+                    <label><input type="radio" name="q6" value="b"> b) git fetch</label>
+                    <label><input type="radio" name="q6" value="c"> c) git clone</label>
+                </div>
+            </div>
+
+            <div>
+                <p class="font-semibold mb-2">7. En Java, ¿qué palabra clave define un método que no devuelve valor?</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="q7" value="a"> a) void</label>
+                    <label><input type="radio" name="q7" value="b"> b) int</label>
+                    <label><input type="radio" name="q7" value="c"> c) null</label>
+                </div>
+            </div>
+
+            <div>
+                <p class="font-semibold mb-2">8. ¿Qué es un CMS?</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="q8" value="a"> a) Un sistema de control de versiones</label>
+                    <label><input type="radio" name="q8" value="b"> b) Un sistema de gestión de contenidos</label>
+                    <label><input type="radio" name="q8" value="c"> c) Un lenguaje de marcado</label>
+                </div>
+            </div>
+
+            <div>
+                <p class="font-semibold mb-2">9. ¿Cuál de estas librerías es para diseño responsivo?</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="q9" value="a"> a) Bootstrap</label>
+                    <label><input type="radio" name="q9" value="b"> b) NumPy</label>
+                    <label><input type="radio" name="q9" value="c"> c) Express.js</label>
+                </div>
+            </div>
+
+            <div>
+                <p class="font-semibold mb-2">10. En JavaScript, un array se declara así:</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="q10" value="a"> a) var a = {1,2,3};</label>
+                    <label><input type="radio" name="q10" value="b"> b) var a = [1,2,3];</label>
+                    <label><input type="radio" name="q10" value="c"> c) var a = (1,2,3);</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-separator"></div>
+
+        <h2 class="text-2xl mt-8 mb-4">3. Actividad práctica breve (Mini‐reto)</h2>
+        <h3 class="text-xl mb-2">Objetivo: Combinar lógica de programación básica con maquetación web.</h3>
+
+        <h3 class="text-xl mt-6 mb-2">Algoritmo (pseudocódigo)</h3>
+        <p class="mb-4">Diseña un pequeño algoritmo que reciba dos números y calcule cuál es mayor.</p>
+        <p class="font-semibold">Ejemplo de formato:</p>
+        <div class="code-block">
+            Entrada: a, b<br>
+            Si a > b entonces<br>
+            &nbsp;&nbsp;&nbsp;Mayor = a<br>
+            Sino<br>
+            &nbsp;&nbsp;&nbsp;Mayor = b<br>
+            FinSi<br>
+            Salida: Mayor
+        </div>
+
+        <h3 class="text-xl mt-6 mb-2">Maquetación HTML/CSS</h3>
+        <p class="mb-4">
+            Crea en un folio o cuaderno un boceto (wireframe) de una página que muestre el resultado anterior.
+            Debe incluir: un título, dos campos (para mostrar los números) y un área donde aparezca el “Mayor”.
+            Indica dónde aplicarías estilos CSS básicos (colores, márgenes, fuente).
+        </p>
+
+        <div class="section-separator"></div>
+
+        <h2 class="text-2xl mt-8 mb-4">Criterios de corrección:</h2>
+        <ul class="list-disc list-inside mb-4">
+            <li>Claridad y completitud del pseudocódigo.</li>
+            <li>Lógica correcta para determinar el número mayor.</li>
+            <li>Diseño del wireframe: estructura coherente, uso de elementos semánticos (&lt;h1&gt;, &lt;div&gt;, etc.).</li>
+        </ul>
+
+        <h2 class="text-2xl mt-8 mb-4">Escala y devolución</h2>
+        <ul class="list-disc list-inside mb-4">
+            <li><strong>Autoevaluación (1–5):</strong> 15–75 puntos</li>
+            <li><strong>Test objetivo:</strong> 1 punto por respuesta correcta (máx. 10)</li>
+            <li><strong>Mini‐reto:</strong> hasta 15 puntos según rúbrica</li>
+            <li><strong>Total posible:</strong> 100 puntos.</li>
+        </ul>
+
+        <p class="mb-4">Con los resultados podrás:</p>
+        <ul class="list-disc list-inside mb-4">
+            <li>Agrupar alumnos por nivel y diseñar sesiones de refuerzo.</li>
+            <li>Identificar qué ejes (programación, diseño, herramientas) necesitan profundización.</li>
+            <li>Detectar potenciales monitores de apoyo entre pares.</li>
+        </ul>
+
+        <p class="text-center text-xl font-bold mt-8">¡Listo para arrancar el curso!</p>
+    </div>
+</body>
+</html>
